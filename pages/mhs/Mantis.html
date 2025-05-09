@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html><script id="allow-copy_script" src="chrome-extension://aefehdhdciieocakfobpaaolhipkcpgc/content_scripts/copy.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="wbJd93RRyva1pcGoaFoPn4N9qzoZyOTuK6bwOXtL">
+
+  <title>Mantis</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.bunny.net/">
+  <link href="../link/css" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script type="module" src="../link/client"></script><link rel="stylesheet" href="../link/app.css"><script type="module" src="../link/app.js.download"></script>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link rel="icon" href="../link/favicon.svg" type="image/x-icon"> <!-- [Google Font] Family -->
+  <link rel="stylesheet" href="../link/css2" id="main-font-link">
+  <!-- [Tabler Icons] https://tablericons.com -->
+  <link rel="stylesheet" href="../link/tabler-icons.min.css">
+  <!-- [Feather Icons] https://feathericons.com -->
+  <link rel="stylesheet" href="../link/feather.css">
+  <!-- [Font Awesome Icons] https://fontawesome.com/icons -->
+  <link rel="stylesheet" href="../link/fontawesome.css">
+  <!-- [Material Icons] https://fonts.google.com/icons -->
+  <link rel="stylesheet" href="../link/material.css">
+  <!-- [Template CSS Files] -->
+  <link rel="stylesheet" href="../link/style.css" id="main-style-link">
+  <link rel="stylesheet" href="../link/style-preset.css">
+
+  <link rel="stylesheet" href="../link/jquery.dataTables.min.css">
+    </head>
+    <body class="font-sans antialiased" data-pc-theme="light" data-pc-direction="ltr" data-pc-preset="preset-1" style="font-family:&quot;Public Sans&quot;, sans-serif" data-new-gr-c-s-check-loaded="14.1103.0" data-gr-ext-installed="">
+        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+            <nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
+    <!-- Primary Navigation Menu -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <div class="flex">
+              <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <a class="navbar-brand" href="#">
+                            <img src="../link/logo-dark.svg" alt="Logo" width="30" height="24" class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200">
+                        </a>
+                        <li class="nav-item">
+                          <a class="nav-link" aria-current="page" href="/dashboard">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" href="/mhs/surat">Surat Mahasiswa</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/dsn/surat">Surat Dosen</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/tu/surat">Surat TU</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/adm/users">Users Admin</a>
+                        </li>
+                    </ul>
+            </div>
+            <div class="d-flex">
+              <div class="hidden sm:flex sm:items-center sm:ms-6">
+                  <div class="relative" x-data="{ open: false }" @click.outside="open = false" @close.stop="open = false">
+          <div class="dropdown-header">
+                                  <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
+                                      <div class="flex-shrink-0">
+                                          <img src="../link/avatar-2.jpg" alt="user-image" class="user-avtar wid-35 rounded-full">
+                                      </div>
+                                      <div class="ms-2">
+                                          <h6 class="my-auto">exalt</h6>
+                                      </div>
+                                  </button>
+                              </div>
+          </div>
+      </div>
+  </div>
+            </div>
+                </div>
+              </nav>
+
+            <!-- Page Heading -->
+                            <header class="bg-white dark:bg-gray-800 shadow">
+                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            Daftar Surat
+        </h2>
+                    </div>
+                </header>
+            
+            <!-- Page Content -->
+            <main>
+                <div class="container text-white">
+        <a href="#" class="mb-4 mt-3 inline-flex items-center px-4 py-2 bg-indigo-600 border border-transparent rounded-md font-semibold text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
+            Buat Surat
+        </a>
+                    <h4>Surat Keterangan Mahasiswa Aktif</h4><table class="table mb-5">
+                
+                <thead>
+                <tr class="bg-gray-400">
+                    <th scope="col" class="px-6 py-3">ID</th>
+                    <th scope="col" class="px-6 py-3">NRP</th>
+                    <th scope="col" class="px-6 py-3">Nama</th>
+                    <th scope="col" class="px-6 py-3">Alamat</th>
+                    <th scope="col" class="px-6 py-3">Semester</th>
+                    <th scope="col" class="px-6 py-3">Keperluan</th>
+                    <th scope="col" class="px-6 py-3">Status</th>
+                    <th scope="col" class="px-6 py-3">File</th>
+                </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                        <td>10</td>
+                        <td>2372034</td>
+                        <td>exalt</td>
+                        <td>bdg</td>
+                        <td>4</td>
+                        <td>magang</td>
+                        <td>
+                                                            <i class="fas fa-circle text-primary f-10 me-1"></i>
+                                                        Selesai
+                        </td>
+                        <td>
+                                                                                                <a href="../link/surat/2372034_10_Aktif.pdf" target="_blank" class="btn btn-success">
+                                        Buka Surat
+                                    </a>
+                                                                                        <div class="modal fade" id="exampleModal-10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Alasan Surat Ditolak </h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-dark">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                                    <tr>
+                        <td>11</td>
+                        <td>2372034</td>
+                        <td>exalt</td>
+                        <td>bdg</td>
+                        <td>2</td>
+                        <td>asd</td>
+                        <td>
+                                                            <i class="fas fa-circle text-danger f-10 me-1"></i>
+                                                        Ditolak
+                        </td>
+                        <td>
+                                                            <button type="button" class="text-dark btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal-11">Lihat Alasan Ditolak</button>
+                                                        <div class="modal fade" id="exampleModal-11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Alasan Surat Ditolak</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-dark">
+                                            tidak bisa
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                                </tbody>
+            </table>
+
+
+            <h4>Surat Pengantar Tugas Mata Kuliah</h4><table class="table mb-5">
+                
+                <thead>
+                <tr class="bg-gray-400">
+                    <th scope="col" class="px-6 py-3">ID</th>
+                    <th scope="col" class="px-6 py-3">NRP</th>
+                    <th scope="col" class="px-6 py-3">Nama</th>
+                    <th scope="col" class="px-6 py-3">Kode MK</th>
+                    <th scope="col" class="px-6 py-3">Nama MK</th>
+                    <th scope="col" class="px-6 py-3">Tujuan</th>
+                    <th scope="col" class="px-6 py-3">Topik</th>
+                    <th scope="col" class="px-6 py-3">Status</th>
+                    <th scope="col" class="px-6 py-3">File</th>
+                </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                        <td>12</td>
+                        <td>2372034</td>
+                        <td>exalt</td>
+                        <td>123123</td>
+                        <td>pwl</td>
+                        <td>Magang</td>
+                        <td>tugas</td>
+                        <td>
+                                                            <i class="fas fa-circle text-danger f-10 me-1"></i>
+                                                        Ditolak
+                        </td>
+                        <td>
+                                                            <button type="button" class="text-dark btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal-12">Lihat Alasan Ditolak</button>
+                                                        <div class="modal fade" id="exampleModal-12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Alasan Surat Ditolak</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-dark">
+                                            asd
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                                    <tr>
+                        <td>13</td>
+                        <td>2372034</td>
+                        <td>exalt</td>
+                        <td>34534</td>
+                        <td>example</td>
+                        <td>test</td>
+                        <td>test1</td>
+                        <td>
+                                                            <i class="fas fa-circle text-primary f-10 me-1"></i>
+                                                        Selesai
+                        </td>
+                        <td>
+                                                                                                <a href="../link/surat/2372034_13_Pengantar.pdf" target="_blank" class="btn btn-success">
+                                        Buka Surat
+                                    </a>
+                                                                                        <div class="modal fade" id="exampleModal-13" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Alasan Surat Ditolak </h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-dark">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                                </tbody>
+            </table>
+
+            <h4>Surat Keterangan Lulus</h4><table class="table mb-5">
+                
+                <thead>
+                <tr class="bg-gray-400">
+                    <th scope="col" class="px-6 py-3">ID</th>
+                    <th scope="col" class="px-6 py-3">NRP</th>
+                    <th scope="col" class="px-6 py-3">Nama</th>
+                    <th scope="col" class="px-6 py-3">Status</th>
+                    <th scope="col" class="px-6 py-3">File</th>
+                </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                        <td>14</td>
+                        <td>2372034</td>
+                        <td>exalt</td>
+                        <td>
+                                                            <i class="fas fa-circle text-danger f-10 me-1"></i>
+                                                        Ditolak
+                        </td>
+                        <td>
+                                                            <button type="button" class="text-dark btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal-14">Lihat Alasan Ditolak</button>
+                                                        <div class="modal fade" id="exampleModal-14" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Alasan Surat Ditolak</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-dark">
+                                            der
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                                    <tr>
+                        <td>15</td>
+                        <td>2372034</td>
+                        <td>exalt</td>
+                        <td>
+                                                            <i class="fas fa-circle text-primary f-10 me-1"></i>
+                                                        Selesai
+                        </td>
+                        <td>
+                                                                                                <a href="../link/surat/2372034_15_Lulus.pdf" target="_blank" class="btn btn-success">
+                                        Buka Surat
+                                    </a>
+                                                                                        <div class="modal fade" id="exampleModal-15" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Alasan Surat Ditolak </h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-dark">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                                </tbody>
+            </table>
+
+            <h4>Surat Laporan Hasil Studi</h4><table class="table mb-5">
+                
+                <thead>
+                <tr class="bg-gray-400">
+                    <th scope="col" class="px-6 py-3">ID</th>
+                    <th scope="col" class="px-6 py-3">NRP</th>
+                    <th scope="col" class="px-6 py-3">Nama</th>
+                    <th scope="col" class="px-6 py-3">Keperluan</th>
+                    <th scope="col" class="px-6 py-3">Status</th>
+                    <th scope="col" class="px-6 py-3">File</th>
+                </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                        <td>16</td>
+                        <td>2372034</td>
+                        <td>exalt</td>
+                        <td>example 1</td>
+                        <td>
+                                                            <i class="fas fa-circle text-success f-10 me-1"></i>
+                                                        Disetujui
+                        </td>
+                        <td>
+                                                                                                <span class="text-gray-500 italic">Belum tersedia</span>
+                                                                                        <div class="modal fade" id="exampleModal-16" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Alasan Surat Ditolak </h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-dark">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                                    <tr>
+                        <td>17</td>
+                        <td>2372034</td>
+                        <td>exalt</td>
+                        <td>example 2</td>
+                        <td>
+                                                            <i class="fas fa-circle text-danger f-10 me-1"></i>
+                                                        Ditolak
+                        </td>
+                        <td>
+                                                            <button type="button" class="text-dark btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal-17">Lihat Alasan Ditolak</button>
+                                                        <div class="modal fade" id="exampleModal-17" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Alasan Surat Ditolak</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-dark">
+                                            efefw
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                                </tbody>
+            </table>
+
+    </div>
+            </main>
+        </div>
+
+
+
+
+        <!-- jQuery -->
+        <script src="../link/jquery-3.6.0.min.js.download"></script>
+
+        <script src="../link/bootstrap.bundle.min.js.download"></script>
+        <!-- DataTables -->
+        <script src="../link/jquery.dataTables.min.js.download"></script>
+
+
+        <!-- [Page Specific JS] start -->
+        <script src="../link/apexcharts.min.js.download"></script>
+        <script src="../link/dashboard-default.js.download"></script>
+        <!-- [Page Specific JS] end -->
+        <!-- Required Js -->
+        <script src="../link/popper.min.js.download"></script>
+        <script src="../link/simplebar.min.js.download"></script>
+        <script src="../link/bootstrap.min.js.download"></script>
+        <script src="../link/custom-font.js.download"></script>
+<div class="d-none">
+</body></html>
