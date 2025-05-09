@@ -24,6 +24,9 @@ const server = http.createServer((req, res) => {
         case "/adm/users" :
             fileLocation = "pages/admin/Mantis.html"
             break;
+        case "/adm/users/create" :
+            fileLocation = "pages/admin/addUser.html"
+            break;
         default :
             fileLocation = "pages/dashboard/Mantis.html"
             break
